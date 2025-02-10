@@ -37,13 +37,13 @@ class AuthenticatedSessionController extends Controller
             $user = Auth::user();
             switch ($user->type_users) {
                 case 'admin':
-                    return redirect()->route('admin.dashboard');
+                    return redirect()->route('dashboard.admin');
                 case 'teknisi':
-                    return redirect()->route('teknisi.dashboard');
+                    return redirect()->route('dashboard.teknisi');
                 case 'laboran':
-                    return redirect()->route('laboran.dashboard');
+                    return redirect()->route('dashboard.laboran');
                 default:
-                    return redirect()->route('user.dashboard');
+                    return redirect()->route('dashboard.user');
             }
         }
 

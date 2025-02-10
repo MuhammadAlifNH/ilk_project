@@ -32,17 +32,17 @@ require __DIR__.'/auth.php';
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard/admin', function () {
         return view('dashboard.admin'); // resources/views/dashboard/admin.blade.php
-    })->name('admin.dashboard');
+    })->name('dashboard.admin.');
 
     Route::get('/dashboard/teknisi', function () {
         return view('dashboard.teknisi'); // resources/views/dashboard/teknisi.blade.php
-    })->name('teknisi.dashboard');
+    })->name('dashboard.teknisi');
 
     Route::get('/dashboard/laboran', function () {
         return view('dashboard.laboran'); // resources/views/dashboard/laboran.blade.php
-    })->name('laboran.dashboard');
+    })->name('dashboard.laboran');
 
     Route::get('/dashboard/user', function () {
         return view('dashboard.user'); // resources/views/dashboard/user.blade.php
-    })->name('user.dashboard');
+    })->name('dashboard.user');
 });
