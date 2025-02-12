@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->enum('type_users', ['User', 'Teknisi', 'Laboran', 'Admin'])->default('user');
+            $table->enum('type_users', ['User', 'Teknisi', 'Laboran', 'Admin'])->default('User');
             $table->timestamps();
         });
 
